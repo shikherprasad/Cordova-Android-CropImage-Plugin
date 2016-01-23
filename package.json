@@ -1,0 +1,26 @@
+{
+  "name": "com.cordova.crop.image.plugin",
+  "version": "1.0.0-dev",
+  "description": "cordova crop image plugin",
+  "cordova": {
+    "id": "cordova-crop-image-plugin",
+    "platforms": [
+    "android"
+    ]
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/LokeshPatel/Cordova-Android-CropImage-Plugin"
+      },
+      "keywords": [
+      "cordova",
+      "crop image",
+      "cordova crop image",
+      ],
+      "engines": [{
+      "name": "cordova",
+      "version": ">=3.0.0"
+      }],
+      "author": "Lokesh Patel",
+      "license": "Apache 2.0"
+}

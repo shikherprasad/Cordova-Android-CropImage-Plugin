@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="cordova-crop-image-plugin"
+	version="1.0.0-dev">
+	<name>Cordova Crop Image Plugin</name>
+	
+	<description>Cordova Crop Image Plugin</description>
+	
+	<license>Apache 2.0</license>
+	
+	<keywords>cordova,crop image</keywords>
+	
+	 <info>Cordova crop image plugin for Cordova/PhoneGap</info>
+	  <repo>https://github.com/LokeshPatel/Cordova-Android-CropImage-Plugin</repo>
+	  
+	 <js-module src="www/cropImageHandlePlugin.js" name="CDVCropImage">
+		<clobbers target="navigator.cropimage"/>
+	</js-module>
+	
+	<engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  <!-- android -->
+	<platform name="android">
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:name="com.android.croplib.CropImage" />
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/*">
+              <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+              <uses-permission android:name="android.permission.CAMERA" />
+		</config-file>
+		<config-file target="res/xml/config.xml" parent="/*">
+			   <feature name="CameraCropImage">
+                 <param name="android-package" value="com.cordova.cropimage.plugin.cropHandlePlugin" />
+              </feature>
+		</config-file>
+		<framework src="src/android/lib/cropimage-lib" custom="true" />
+		<source-file src="src/android/cropHandlePlugin.java" target-dir="src/com/cordova/cropimage/plugin" />
+		<source-file src="src/android/InternalStorageContentProvider.java" target-dir="src/com/cordova/cropimage/plugin" />
+	</platform>
+</plugin>
