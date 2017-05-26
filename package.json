@@ -16,7 +16,7 @@
       "cordova",
       "crop image",
       "cordova crop image",
-      ],
+      ]
       "engines": [{
       "name": "cordova",
       "version": ">=3.0.0"
